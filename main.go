@@ -22,6 +22,18 @@ func setupRouter() *gin.Engine {
 		c.String(http.StatusOK, "ping")
 	})
 
+	r.GET("/pang", func(c *gin.Context) {
+		c.String(http.StatusOK, "pang")
+	})
+
+	r.GET("/peng", func(c *gin.Context) {
+		c.String(http.StatusOK, "pang")
+	})
+
+	r.GET("/pung", func(c *gin.Context) {
+		c.String(http.StatusOK, "pung")
+	})
+
 	// Get user value
 	r.GET("/user/:name", func(c *gin.Context) {
 		user := c.Params.ByName("name")
